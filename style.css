@@ -1,0 +1,232 @@
+/* Title Container  and standard components */
+/* =============================================== */
+.pagetitle {
+    margin-top: 10px;
+    text-align: left; }
+
+.pagetitle h1 {
+    margin: 0;
+    text-align: left;
+    height: 20px;
+    font-size: 150%; }
+
+.evalbox {
+    margin-top: 10px;
+    height: 310px; }
+
+.stdcatalog {
+    margin: 0 0 5px;
+    width: 360px;
+    height: 310px;
+    float: left; }
+
+.sectitle {
+    margin-top: 5px;
+    height: 30px; }
+
+.sectitle {
+    background: linear-gradient(to right, #1f242d, #292f3b);
+    display: table; }
+
+.sectitle h2 {
+    margin: 3px 0 0;
+    text-align: right;
+    height: 20px;
+    padding-right: 20px; }
+
+.sectitle h2 {
+    text-transform: uppercase;
+    vertical-align: middle;
+    color: deepskyblue; }
+
+/* General Container */
+/* =============================================== */
+#overview {
+    width: 310px;
+    min-height: 500px;
+    float: left; }
+
+#overtext {
+    width: 310px;
+    min-height: 100px; }
+
+#overtext td {
+    vertical-align: middle; }
+
+.ohead {
+    height: 50px;
+    color: white; }
+
+.ocol0 {
+    width: 100px;
+    text-align: left; }
+
+.ocol1 {
+    width: 200px;
+    text-align: left;
+    color: deepskyblue; }
+
+.obody {
+    height: 20px;
+    color: white; }
+
+.pricev {
+    font-size: 200%; }
+
+#volchart {
+    width: 300px;
+    min-height: 110px;
+    margin-top: 15px; }
+
+#dailybox {
+    background: #10394B;
+    margin: 0 0 5px; }
+
+#dailybox {
+    width: 670px;
+    height: 500px;
+    float: left; }
+
+#dailybox {
+    -webkit-box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.75); }
+
+#candlebox {
+    margin: 5px;
+    width: 600px;
+    height: 300px;
+    float: left; }
+
+#candlecat {
+    margin: 50px 0 10px 0;
+    width: 40px;
+    height: 200px;
+    float: left; }
+
+.periodbut {
+    background: #1f242d;
+    margin: 5px 0 5px;
+    width: 40px;
+    height: 30px; }
+
+.periodbut {
+    float: center;
+    text-align: center;
+    font-size: small;
+    display: table; }
+
+.periodbut a {
+    text-decoration: none;
+    color: white;
+    display: table-cell;
+    vertical-align: middle; }
+
+/* *************************************************************************************** */
+/* Standard Combination */
+/* *************************************************************************************** */
+.pricomb, body {
+    background: #00151C;
+    font-family: "Montserrat", sans-serif;
+    color: white; }
+
+.pricomb, body {
+    font-size: small;
+    text-align: center; }
+
+.b0comb, .pagetitle, .evalbox, .sectitle, #heading {
+    width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 30px; }
+
+.b1comb, .stdchart {
+    background: #10394B;
+    width: 620px;
+    height: 310px;
+    float: left;
+    border-radius: 10px; }
+
+/* *************************************************************************************** */
+/* Body */
+/* *************************************************************************************** */
+body {
+    margin: 0; }
+
+/* Gain / Loss Colors */
+/* =============================================== */
+.poscol {
+    color: yellowgreen; }
+
+.negcol {
+    color: crimson; }
+
+
+#chart1 .grid { stroke-opacity: .3; }
+#chart1 .axis line,
+#chart1 .axis.xaxis path { fill: none; stroke: darkgrey; shape-rendering: crispEdges; }
+#chart1 .tick text { font: 10px sans-serif; fill: darkgrey; stroke-opacity: .3; }
+#chart1 .axis.yaxis path { fill: none; stroke: #10394B; }
+
+#chart1 .bands rect { fill: darkgrey; fill-opacity: 0; stroke-opacity: 0; pointer-events: all; shape-rendering: crispEdges; }
+#chart1 .bands .hoved { fill-opacity: .6; }
+#chart1 .sticks rect { pointer-events: none; shape-rendering: crispEdges; }
+#chart1 .sticks .rise, #chart1 .candles .rise { fill: lightgrey; }
+#chart1 .sticks .fall, #chart1 .candles .fall { fill: turquoise; }
+#chart1 .sticks .hoved { stroke: white; }
+#chart1 .candles .hoved { stroke: white; }
+#chart1 .candles rect { pointer-events: none; shape-rendering: crispEdges; }
+
+#chart1 .bbmn { fill: none; stroke: cyan; stroke-width: 1.5px; pointer-events: none; }
+#chart1 .bbup { fill: none; stroke: green; stroke-width: 1.5px; pointer-events: none; }
+#chart1 .bbdn { fill: none; stroke: crimson; stroke-width: 1.5px; pointer-events: none; }
+
+#chart1 .volumebar { fill: darkgrey; }
+#chart1 .volumebar rect { pointer-events: none; }
+#chart1 .volumebar .hoved { fill: white; }
+#chart1 .sigmabar { fill: darkgrey; }
+#chart1 .sigmabar rect { pointer-events: none; }
+#chart1 .sigmabar .hoved { fill: white; }
+
+#option    { width: 230px; height: 25px; float: left; padding-top: 5px; }
+#option input { cursor: pointer; border-radius: 5px; color: #fff; background: #696d75; border: none; }
+#option input {
+    -webkit-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75);
+}
+#option .active { cursor: auto; background: #94979d; }
+#option .active {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+#infobar   { width: 440px; height: 25px; float: left; padding-top: 5px; text-align: left; }
+.infohead  { width: 140px; height: 25px; margin: 0px 2px; float: left; }
+.infobox   { width: 70px; height: 30px; margin: 0px 2px; float: left; }
+
+.subdet    { width: 300px; height: 15px; margin: 5px 0px; display: block; }
+.subsel    { width: 20px; height: 15px; float:left; font-size: x-small; }
+.subsel input { cursor: pointer; border-radius: 5px; color: #fff; background: #696d75; font-size: x-small; border: none; }
+.subsel input {
+    -webkit-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75);
+}
+.subsel .active { cursor: auto; background: #94979d; }
+.subsel .active {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+.subname   { width: 80px; height: 15px; float:left; font-size: x-small; text-align: left; }
+.subchart  { width: 170px; height: 15px; float:left; }
+.subtext   { width: 20px; height: 15px; float:left; font-size: x-small; text-align: left; }
+.subunit   { width: 10px; height: 15px; float:left; font-size: x-small; text-align: left; }
+
+#volchart .volbar .volfill { fill: crimson; }
+#volchart .sigbar .sigfill { fill: crimson; }
+#volchart .bobbar .bobfill { fill: crimson; }
+#volchart .aurbar .aurfill { fill: crimson; }
+#volchart .crrbar .crrfill { fill: crimson; }
+#volchart input { cursor: pointer; }

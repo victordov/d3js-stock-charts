@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>anilnair.xyz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <style type="text/css" media="screen">@import "style.css";</style>
+</head>
+<body>
+<div class="pagetitle">
+    <h1 id="stkname">HDFC Bank Limited</h1>
+</div> <!-- pagetitle -->
+<div class="evalbox">
+    <div id="overview">
+        <div id="overtext">
+            <table>
+                <tr class="ohead"> <td class="ocol0">NSE Price</td>
+                    <td class="ocol1 poscol"><span class="pricev">1071.15</span> (0.58%)</td> </tr>
+                <tr class="obody"> <td class="ocol0">Sector</td> <td class="ocol1">Finance</td> </tr>
+                <tr class="obody"> <td class="ocol0">Industry</td> <td class="ocol1">Private Sector Bank</td> </tr>
+                <tr class="obody"> <td class="ocol0">Market Cap</td> <td class="ocol1">270000 Cr</a></div>
+        <tr class="obody"> <td class="ocol0">Category</td> <td class="ocol1">Large Cap</a></div>
+    </table>
+</div> <!-- overtext -->
+<div id="volchart">
+    <div class="subdet">
+        <div class="subsel"></div>
+        <div class="subname">Volume</div>
+        <div class="subchart"><div id="Schart1"></div></div>
+        <div class="subtext"><div id="Schart1T"></div></div>
+        <div class="subunit">Cr</div>
+    </div>
+    <div class="subdet">
+        <div class="subsel"></div>
+        <div class="subname">Volatility</div>
+        <div class="subchart"><div id="Schart2"></div></div>
+        <div class="subtext"><div id="Schart2T"></div></div>
+        <div class="subunit">%</div>
+    </div>
+    <div class="subdet">
+        <div class="subsel"><input id="bobSel" name="bob" type="button" value=""/></div>
+        <div class="subname">Bollinger Band</div>
+        <div class="subchart"><div id="Schart3"></div></div>
+        <div class="subtext"><div id="Schart3T"></div></div>
+        <div class="subunit">%</div>
+    </div>
+    <div class="subdet">
+        <div class="subsel"><input id="aurSel" name="aur" type="button" value=""/></div>
+        <div class="subname">Auto Regress</div>
+        <div class="subchart"><div id="Schart4"></div></div>
+        <div class="subtext"><div id="Schart4T"></div></div>
+        <div class="subunit">%</div>
+    </div>
+    <div class="subdet">
+        <div class="subsel"><input id="crrSel" name="crr" type="button" value=""/></div>
+        <div id=crrname class="subname"></div>
+        <div class="subchart"><div id="Schart5"></div></div>
+        <div class="subtext"><div id="Schart5T"></div></div>
+        <div class="subunit">%</div>
+    </div>
+</div> <!-- volchart -->
+<div id="flower"></div>
+</div> <!-- overview -->
+<div id="dailybox">
+    <div id="option">
+        <input id="oneM" name="1M" type="button" value="1M"/>
+        <input id="threeM" name="3M" type="button" value="3M" />
+        <input id="sixM" name="6M" type="button" value="6M" />
+        <input id="oneY" name="1Y" type="button" value="1Y" />
+        <input id="twoY" name="2Y" type="button" value="2Y" />
+        <input id="fourY" name="4Y" type="button" value="4Y" />
+    </div>
+    <div id="infobar">
+        <div id="infodate" class="infohead"></div>
+        <div id="infoopen" class="infobox"></div>
+        <div id="infohigh" class="infobox"></div>
+        <div id="infolow" class="infobox"></div>
+        <div id="infoclose" class="infobox"></div>
+    </div>
+    <div id="chart1"></div>
+</div> <!-- dailybox -->
+</div> <!-- evalbox -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+<script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script src="cschart.js"></script>
+<script src="barchart.js"></script>
+<script src="csheader.js"></script>
+<script src="sbar.js"></script>
+<script src="main.js"></script>
+<script src="dataprep.js"></script>
+<script>
+    var parseDate    = d3.time.format("%Y-%m-%d").parse;
+    var TPeriod      = "3M";
+    var TDays        = {"1M":21, "3M":63, "6M":126, "1Y":252, "2Y":504, "4Y":1008 };
+    var TIntervals   = {"1M":"day", "3M":"day", "6M":"day", "1Y":"week", "2Y":"week", "4Y":"month" };
+    var TFormat      = {"day":"%d %b '%y", "week":"%d %b '%y", "month":"%b '%y" };
+    var TOverlay     = "none";
+    var genRaw, bobRaw, crrRaw, genData, bobData, crrData;
+    var ldRemain     = 3;
+
+    d3.csv("general.csv", genType, function(data) {
+        genRaw         = data;
+        if (!--ldRemain) mainjs();
+    });
+
+    d3.csv("autocorr.csv", bobType, function(data) {
+        bobRaw         = data;
+        if (!--ldRemain) mainjs();
+    });
+
+    d3.csv("crosscorr.csv", crrType, function(data) {
+        crrRaw         = data;
+        if (!--ldRemain) mainjs();
+    });
+
+</script>
+</body>
+</html>
